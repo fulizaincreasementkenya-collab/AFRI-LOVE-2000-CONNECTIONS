@@ -1,0 +1,766 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriLove Genuine Matchmaking Portal | Connect Across Africa</title>
+    <!-- Tailwind CSS for utility layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Retro Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Trebuchet+MS&display=swap" rel="stylesheet">
+
+    <style>
+        /* Classic 2000s Retro Web 2.0 Styling */
+        :root {
+            --gold-primary: #FFD700;
+            --gold-dark: #CCAC00;
+            --crimson-red: #8B0000;
+            --bright-red: #DC143C;
+            --sunset-orange: #FF4500;
+            --warm-bronze: #8B4513;
+            --dark-bg: #120905;
+            --border-gold: #D4AF37;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #fce8d5;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: radial-gradient(#3a1b0d 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .heading-retro {
+            font-family: 'Changa One', Impact, sans-serif;
+            text-shadow: 2px 2px 0px #000, -1px -1px 0 #8b0000, 1px -1px 0 #8b0000, -1px 1px 0 #8b0000, 1px 1px 0 #8b0000;
+            letter-spacing: 1px;
+        }
+
+        .mono-text {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* Classic Web 2.0 Bevel Box Border styling */
+        .retro-box {
+            background: linear-gradient(145deg, #2a150b, #1a0b04);
+            border: 3px double var(--border-gold);
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.7), inset 1px 1px 2px rgba(255, 215, 0, 0.3);
+        }
+
+        .retro-box-gold {
+            background: linear-gradient(180deg, #422506 0%, #1d0f02 100%);
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .retro-button {
+            background: linear-gradient(180deg, #25D366 0%, #128C7E 100%);
+            color: #FFFFFF;
+            font-weight: bold;
+            border: 2px solid #FFD700;
+            box-shadow: 3px 3px 0px #000;
+            text-shadow: 1px 1px 2px #000;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .retro-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #000;
+            background: linear-gradient(180deg, #34E075 0%, #0E6B60 100%);
+        }
+
+        .retro-button:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px #000;
+        }
+
+        .retro-badge {
+            background: linear-gradient(90deg, #8B0000, #FF4500, #8B0000);
+            border: 1px dashed #FFD700;
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 5px #FFD700; }
+            100% { box-shadow: 0 0 15px #FF4500, 0 0 25px #FFD700; }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a0b04;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--warm-bronze);
+            border: 1px solid var(--gold-primary);
+            border-radius: 4px;
+        }
+
+        .heart-pop {
+            animation: pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Announcement Ticker -->
+    <div class="bg-black border-b-2 border-amber-500 py-1 text-amber-300 mono-text text-xs md:text-sm overflow-hidden whitespace-nowrap">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            <span class="mx-4"><i class="fa-solid fa-heart text-red-500"></i> WELCOME TO AFRI-LOVE MATCHMAKING PORTAL</span>
+            <span class="mx-4">★ CONNECTING ALL 54 AFRICAN NATIONS ★</span>
+            <span class="mx-4"><i class="fa-solid fa-shield-halved text-amber-400"></i> 100% GENUINE & VERIFIED HUMAN MATCHMAKING</span>
+            <span class="mx-4"><i class="fa-brands fa-whatsapp text-green-400"></i> AUTOMATIC DIRECT SUBMISSION TO WHATSAPP: +254 789 697483</span>
+            <span class="mx-4"><i class="fa-solid fa-coins text-yellow-400"></i> FLAT MATCHING FEE (500 KSH BASE EQUIVALENT IN ALL CURRENCIES)</span>
+        </marquee>
+    </div>
+
+    <!-- Header Section -->
+    <header class="py-6 px-4 text-center bg-gradient-to-b from-amber-950/80 to-stone-900 border-b-4 border-amber-600 relative">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <!-- Logo area -->
+            <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 to-red-600 flex items-center justify-center border-2 border-yellow-300 shadow-lg text-2xl text-yellow-100">
+                    <i class="fa-solid fa-earth-africa fa-spin" style="animation-duration: 12s;"></i>
+                </div>
+                <div class="text-left">
+                    <h1 class="text-3xl md:text-5xl heading-retro text-amber-400 tracking-wider">AFRI-LOVE <span class="text-red-500">2000</span></h1>
+                    <p class="text-xs md:text-sm text-amber-200/90 mono-text font-bold uppercase">Pan-African Genuine Lover & Soulmate Portal</p>
+                </div>
+            </div>
+
+            <!-- Quick WhatsApp Box -->
+            <div class="retro-box-gold p-3 rounded text-center md:text-right w-full md:w-auto">
+                <div class="text-xs text-amber-300 font-bold uppercase"><i class="fa-solid fa-headset text-green-400"></i> Official Matchmaker Support:</div>
+                <a href="https://wa.me/254789697483" target="_blank" class="text-xl font-extrabold text-green-400 hover:text-green-300 mono-text flex items-center justify-center md:justify-end gap-2 mt-1">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> +254 789 697483
+                </a>
+                <a href="mailto:afrilove2000@gmail.com" class="text-xs font-bold text-yellow-300 hover:text-yellow-100 flex items-center justify-center md:justify-end gap-1.5 mt-1">
+                    <i class="fa-solid fa-envelope text-red-400"></i> afrilove2000@gmail.com
+                </a>
+                <span class="text-[10px] text-amber-200 block">(0789697483 - Active 24/7 Match Support)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Media Bar & Official Contact Bar -->
+    <section class="bg-gradient-to-r from-stone-950 via-amber-950 to-stone-950 py-2 border-b-2 border-amber-600/80 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 text-yellow-300 font-bold">
+                <i class="fa-solid fa-paper-plane text-amber-400"></i>
+                <span>Email Us Directly:</span>
+                <a href="mailto:afrilove2000@gmail.com" class="text-yellow-100 hover:underline mono-text">afrilove2000@gmail.com</a>
+            </div>
+            
+            <!-- Social Media Handles -->
+            <div class="flex flex-wrap items-center justify-center gap-3 font-bold text-stone-200">
+                <span class="text-amber-400 text-[11px] uppercase tracking-wide">Follow Our Official Pages:</span>
+                <a href="https://facebook.com" target="_blank" class="hover:text-blue-400 flex items-center gap-1 bg-stone-900 border border-amber-800 px-2 py-0.5 rounded text-[11px]">
+                    <i class="fa-brands fa-facebook text-blue-500"></i> AFRI LOVE 2000 CONNECTION
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="hover:text-pink-400 flex items-center gap-1 bg-stone-900 border border-amber-800 px-2 py-0.5 rounded text-[11px]">
+                    <i class="fa-brands fa-tiktok text-white"></i> AFRI LOVE 2000
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 flex items-center gap-1 bg-stone-900 border border-amber-800 px-2 py-0.5 rounded text-[11px]">
+                    <i class="fa-brands fa-instagram text-pink-400"></i> AFRI LOVE 2000
+                </a>
+                <a href="https://twitter.com" target="_blank" class="hover:text-sky-400 flex items-center gap-1 bg-stone-900 border border-amber-800 px-2 py-0.5 rounded text-[11px]">
+                    <i class="fa-brands fa-x-twitter text-stone-200"></i> AFRI LOVE 2000 CONNECTION
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="bg-stone-950 py-2.5 border-b border-amber-800/50 px-2">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs font-bold">
+            <div class="p-2 retro-badge rounded text-yellow-100 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-check-double text-green-300"></i> 100% Genuine Singles
+            </div>
+            <div class="p-2 retro-badge rounded text-yellow-100 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-globe text-yellow-300"></i> All 54 African Nations
+            </div>
+            <div class="p-2 retro-badge rounded text-yellow-100 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-hand-holding-dollar text-orange-300"></i> Country Currency Rates
+            </div>
+            <div class="p-2 retro-badge rounded text-yellow-100 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-user-shield text-cyan-300"></i> Male & Female Matches
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-6xl mx-auto w-full p-3 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- LEFT COLUMN: Currency Calculator & Match Form (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+
+            <!-- Dynamic Currency & Fee Info Card -->
+            <div class="retro-box p-4 md:p-6 rounded-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-700 text-yellow-200 text-xs font-bold px-3 py-1 rounded-bl border-l border-b border-yellow-400 uppercase">
+                    Flat Match Fee
+                </div>
+                <h2 class="text-xl md:text-2xl heading-retro text-yellow-400 mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-red-500"></i> Homeland & Fee Converter
+                </h2>
+                <p class="text-xs md:text-sm text-stone-300 mb-4">
+                    Connection fee is fixed at <span class="text-yellow-400 font-bold">500 KES</span>. Choose your homeland to view your local fee and auto-set your country phone code:
+                </p>
+
+                <!-- Homeland Selector -->
+                <div class="bg-stone-900/90 p-4 border border-amber-600 rounded-md space-y-3">
+                    <div>
+                        <label for="homelandSelect" class="block text-sm font-bold text-amber-300 mb-1">
+                            <i class="fa-solid fa-flag text-red-400"></i> Select Your Homeland Country:
+                        </label>
+                        <select id="homelandSelect" onchange="onCountrySelectChange(this.value)" class="w-full bg-stone-950 border-2 border-amber-500 text-yellow-100 p-2.5 rounded font-bold text-base focus:outline-none focus:border-red-500">
+                            <!-- Populated with all 54 African countries -->
+                        </select>
+                    </div>
+
+                    <!-- Live Conversion Result Box -->
+                    <div class="p-3 bg-gradient-to-r from-amber-950 to-stone-900 border-2 border-yellow-500 rounded text-center">
+                        <span class="text-xs text-amber-200 uppercase font-bold block">Your Local Country Connection Fee:</span>
+                        <div id="feeDisplay" class="text-2xl md:text-3xl font-extrabold text-yellow-300 my-1 mono-text">
+                            500 KSh <span class="text-sm font-normal text-amber-100">(Kenya +254)</span>
+                        </div>
+                        <p class="text-[11px] text-stone-400 italic">
+                            *Automatically included in your formatted WhatsApp application payload.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Form -->
+            <div class="retro-box p-4 md:p-6 rounded-lg">
+                <div class="border-b-2 border-amber-600/60 pb-3 mb-4">
+                    <h2 class="text-2xl heading-retro text-yellow-400 flex items-center gap-2">
+                        <i class="fa-solid fa-heart-circle-check text-red-500"></i> Application For Genuine Match
+                    </h2>
+                    <p class="text-xs text-amber-200/80">
+                        Submitting this form opens WhatsApp automatically with your application pre-filled to send directly to <span class="text-green-400 font-bold">0789697483</span>.
+                    </p>
+                </div>
+
+                <form id="matchForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    
+                    <!-- Name & Age -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Full Name / Alias *</label>
+                            <input type="text" id="applicantName" required placeholder="e.g. Kwame Mensah" class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Your Age *</label>
+                            <input type="number" id="applicantAge" required min="18" max="99" placeholder="25" class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                        </div>
+                    </div>
+
+                    <!-- Gender & Looking For -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Your Gender *</label>
+                            <select id="applicantGender" required class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                                <option value="Male">Male ♂</option>
+                                <option value="Female">Female ♀</option>
+                                <option value="Non-Binary/Other">Other / Open</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Seeking / Looking For *</label>
+                            <select id="seekingGender" required class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                                <option value="Female Lover ♀">Female Lover ♀</option>
+                                <option value="Male Lover ♂">Male Lover ♂</option>
+                                <option value="Any Genuine Match">Any Genuine Match</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Homeland Country & Current City -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Homeland Country *</label>
+                            <select id="formHomeland" onchange="onCountrySelectChange(this.value)" required class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase mb-1">Current City / Location *</label>
+                            <input type="text" id="applicantCity" required placeholder="e.g. Nairobi, Lagos, Accra, Joburg" class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400">
+                        </div>
+                    </div>
+
+                    <!-- Phone Number with Country Dial Code -->
+                    <div>
+                        <label class="block text-xs font-bold text-amber-300 uppercase mb-1">WhatsApp / Phone Number with Dial Code *</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="dialCodePrefix" readonly class="w-24 bg-stone-900 border border-amber-500 rounded p-2 text-yellow-300 font-bold text-sm text-center mono-text" value="+254">
+                            <input type="tel" id="applicantPhone" required placeholder="712345678 or 0712345678" class="flex-1 bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400 mono-text">
+                        </div>
+                        <span class="text-[10px] text-amber-200/70 mt-1 block">*Dial code automatically matches your selected homeland country.</span>
+                    </div>
+
+                    <!-- Brief Bio / Partner Preferences -->
+                    <div>
+                        <label class="block text-xs font-bold text-amber-300 uppercase mb-1">About You & Partner Preferences *</label>
+                        <textarea id="applicantBio" rows="3" required placeholder="Tell us about yourself, hobbies, and what you are looking for in your lover..." class="w-full bg-stone-950 border border-amber-600 rounded p-2 text-yellow-100 text-sm focus:outline-none focus:border-yellow-400"></textarea>
+                    </div>
+
+                    <!-- Dynamic Fee Summary Alert Box inside Form -->
+                    <div class="p-3 bg-stone-900 border border-dashed border-yellow-500 rounded text-xs text-amber-200">
+                        <span class="font-bold text-yellow-400"><i class="fa-solid fa-circle-info"></i> Connection Summary:</span>
+                        Your match application will automatically open WhatsApp for sending to <span class="text-green-400 font-bold">0789697483</span>. Local fee rate: <span id="formFeeDisplay" class="text-yellow-300 font-bold">500 KSh (Kenya +254)</span>.
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 px-4 retro-button rounded text-base md:text-lg uppercase tracking-wider flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl text-yellow-200"></i>
+                        <span>SUBMIT & OPEN WHATSAPP (0789697483)</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: How It Works & Wall of Love (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+
+            <!-- How It Works Card -->
+            <div class="retro-box p-4 rounded-lg">
+                <h3 class="text-xl heading-retro text-yellow-400 mb-3 border-b border-amber-700/60 pb-1">
+                    <i class="fa-solid fa-diagram-project text-orange-500"></i> How Afri-Love Works
+                </h3>
+                <ol class="space-y-2.5 text-xs text-stone-200 list-decimal list-inside">
+                    <li class="pl-1"><strong class="text-yellow-300">Select Country:</strong> Dial code and currency automatically adjust.</li>
+                    <li class="pl-1"><strong class="text-yellow-300">Complete Application:</strong> Fill in your real bio and preferences.</li>
+                    <li class="pl-1"><strong class="text-yellow-300">Automatic WhatsApp Open:</strong> Click submit to directly dispatch your structured application to <span class="text-green-400 font-bold">0789697483</span>.</li>
+                    <li class="pl-1"><strong class="text-yellow-300">Get Matched:</strong> Connect with verified, genuine singles of your choice!</li>
+                </ol>
+            </div>
+
+            <!-- Official Socials Card -->
+            <div class="retro-box-gold p-4 rounded-lg text-center space-y-3">
+                <h3 class="text-lg heading-retro text-yellow-300 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-share-nodes text-amber-400"></i> Join Our Official Communities
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold">
+                    <a href="https://facebook.com" target="_blank" class="p-2 bg-stone-900 border border-amber-600 rounded flex items-center gap-2 hover:bg-stone-800 text-stone-100">
+                        <i class="fa-brands fa-facebook text-blue-500 text-base"></i>
+                        <div class="text-left leading-tight">
+                            <span class="block text-[9px] text-stone-400">FACEBOOK</span>
+                            <span class="text-amber-200 text-[10px]">AFRI LOVE 2000 CONNECTION</span>
+                        </div>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="p-2 bg-stone-900 border border-amber-600 rounded flex items-center gap-2 hover:bg-stone-800 text-stone-100">
+                        <i class="fa-brands fa-tiktok text-white text-base"></i>
+                        <div class="text-left leading-tight">
+                            <span class="block text-[9px] text-stone-400">TIKTOK</span>
+                            <span class="text-amber-200 text-[10px]">AFRI LOVE 2000</span>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="p-2 bg-stone-900 border border-amber-600 rounded flex items-center gap-2 hover:bg-stone-800 text-stone-100">
+                        <i class="fa-brands fa-instagram text-pink-500 text-base"></i>
+                        <div class="text-left leading-tight">
+                            <span class="block text-[9px] text-stone-400">INSTAGRAM</span>
+                            <span class="text-amber-200 text-[10px]">AFRI LOVE 2000</span>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="p-2 bg-stone-900 border border-amber-600 rounded flex items-center gap-2 hover:bg-stone-800 text-stone-100">
+                        <i class="fa-brands fa-x-twitter text-stone-200 text-base"></i>
+                        <div class="text-left leading-tight">
+                            <span class="block text-[9px] text-stone-400">TWITTER / X</span>
+                            <span class="text-amber-200 text-[10px]">AFRI LOVE 2000 CONNECTION</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wall of Love / Interactive Comments Section -->
+            <div class="retro-box p-4 rounded-lg flex flex-col">
+                <div class="border-b-2 border-amber-600/60 pb-2 mb-3 flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl heading-retro text-yellow-400">
+                            <i class="fa-solid fa-comments text-red-500"></i> Wall of Love
+                        </h3>
+                        <p class="text-[11px] text-amber-200/80">Real feedback & likes from across Africa!</p>
+                    </div>
+                    <span id="totalLikesBadge" class="bg-red-950 border border-red-500 text-yellow-300 text-xs px-2 py-1 rounded font-bold mono-text">
+                        <i class="fa-solid fa-heart text-red-500"></i> <span id="globalLikeCount">0</span>
+                    </span>
+                </div>
+
+                <!-- Add New Comment Accordion Form -->
+                <div class="mb-4 bg-stone-900/90 p-3 rounded border border-amber-700">
+                    <button onclick="toggleCommentForm()" class="w-full text-left text-xs font-bold text-yellow-300 hover:text-yellow-100 flex items-center justify-between">
+                        <span><i class="fa-solid fa-pen-to-square text-orange-400"></i> Leave Your Story / Review...</span>
+                        <i id="commentFormChevron" class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div id="commentFormContainer" class="hidden mt-3 space-y-2 pt-2 border-t border-stone-800">
+                        <input type="text" id="newCommentAuthor" placeholder="Your Name & Country (e.g. Amina from Kenya)" class="w-full bg-stone-950 border border-amber-600 text-xs text-yellow-100 p-2 rounded focus:outline-none">
+                        <textarea id="newCommentText" rows="2" placeholder="Share your positive experience or love testimonial..." class="w-full bg-stone-950 border border-amber-600 text-xs text-yellow-100 p-2 rounded focus:outline-none"></textarea>
+                        <button onclick="postUserComment()" class="w-full py-1.5 bg-gradient-to-r from-red-700 to-amber-600 hover:from-red-600 hover:to-amber-500 text-white font-bold text-xs rounded border border-yellow-400 shadow">
+                            Post Testimonial
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scrollable Comments Feed -->
+                <div id="commentsContainer" class="space-y-3 max-h-[520px] overflow-y-auto pr-1">
+                    <!-- Loaded dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- All 54 Countries Grid -->
+            <div class="retro-box p-4 rounded-lg text-center">
+                <h4 class="text-xs font-bold text-yellow-400 uppercase tracking-wide mb-2">
+                    <i class="fa-solid fa-map-location-dot text-amber-500"></i> Covered African Nations (All 54)
+                </h4>
+                <div class="text-[10px] text-stone-300 leading-relaxed max-h-24 overflow-y-auto p-2 bg-stone-950 rounded border border-amber-900/50" id="countriesTagList">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 border-t-4 border-amber-600 py-6 px-4 text-center text-xs text-amber-200/70 mt-auto">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <div class="flex flex-wrap justify-center items-center gap-3 text-base md:text-lg text-amber-400 font-bold heading-retro">
+                <span>AFRI-LOVE MATCHMAKING</span>
+                <span>•</span>
+                <span class="text-green-400"><i class="fa-brands fa-whatsapp"></i> +254 789 697483</span>
+                <span>•</span>
+                <a href="mailto:afrilove2000@gmail.com" class="text-yellow-300 hover:underline"><i class="fa-solid fa-envelope"></i> afrilove2000@gmail.com</a>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs font-bold text-stone-300 py-1">
+                <a href="https://facebook.com" target="_blank" class="hover:text-blue-400 flex items-center gap-1">
+                    <i class="fa-brands fa-facebook text-blue-500"></i> FB: AFRI LOVE 2000 CONNECTION
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="hover:text-pink-400 flex items-center gap-1">
+                    <i class="fa-brands fa-tiktok text-white"></i> TikTok: AFRI LOVE 2000
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 flex items-center gap-1">
+                    <i class="fa-brands fa-instagram text-pink-400"></i> IG: AFRI LOVE 2000
+                </a>
+                <a href="https://twitter.com" target="_blank" class="hover:text-sky-400 flex items-center gap-1">
+                    <i class="fa-brands fa-x-twitter text-stone-200"></i> X: AFRI LOVE 2000 CONNECTION
+                </a>
+            </div>
+
+            <p class="mono-text text-amber-300/80">
+                Official Matchmaker Number: 0789697483 | Email: afrilove2000@gmail.com | Standard Fee: 500 KES (or local equivalent).
+            </p>
+            <p class="text-[10px] text-stone-500">
+                &copy; 2000-2026 AfriLove Genuine Matchmaker Portal. All rights reserved. Connecting real hearts across Africa.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Comprehensive Dataset of ALL 54 African Countries with Dial Codes, Local Currencies, and Exchange Rates (Base 500 KES)
+        const africanNations = [
+            { name: "Algeria", code: "DZD", dialCode: "+213", symbol: "DZD", rateToKES: 0.98 },
+            { name: "Angola", code: "AOA", dialCode: "+244", symbol: "Kz", rateToKES: 6.8 },
+            { name: "Benin", code: "XOF", dialCode: "+229", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Botswana", code: "BWP", dialCode: "+267", symbol: "P", rateToKES: 0.10 },
+            { name: "Burkina Faso", code: "XOF", dialCode: "+226", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Burundi", code: "BIF", dialCode: "+257", symbol: "FBu", rateToKES: 22.0 },
+            { name: "Cabo Verde", code: "CVE", dialCode: "+238", symbol: "CVE", rateToKES: 0.77 },
+            { name: "Cameroon", code: "XAF", dialCode: "+237", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Central African Republic", code: "XAF", dialCode: "+236", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Chad", code: "XAF", dialCode: "+235", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Comoros", code: "KMF", dialCode: "+269", symbol: "CF", rateToKES: 3.45 },
+            { name: "Congo (Brazzaville)", code: "XAF", dialCode: "+242", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Congo (Kinshasa - DRC)", code: "CDF", dialCode: "+243", symbol: "FC", rateToKES: 21.5 },
+            { name: "Djibouti", code: "DJF", dialCode: "+253", symbol: "Fdj", rateToKES: 1.36 },
+            { name: "Egypt", code: "EGP", dialCode: "+20", symbol: "E£", rateToKES: 0.37 },
+            { name: "Equatorial Guinea", code: "XAF", dialCode: "+240", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Eritrea", code: "ERN", dialCode: "+291", symbol: "Nfk", rateToKES: 0.115 },
+            { name: "Eswatini", code: "SZL", dialCode: "+268", symbol: "E", rateToKES: 0.14 },
+            { name: "Ethiopia", code: "ETB", dialCode: "+251", symbol: "Br", rateToKES: 8.8 },
+            { name: "Gabon", code: "XAF", dialCode: "+241", symbol: "FCFA", rateToKES: 4.6 },
+            { name: "Gambia", code: "GMD", dialCode: "+220", symbol: "D", rateToKES: 0.52 },
+            { name: "Ghana", code: "GHS", dialCode: "+233", symbol: "GH₵", rateToKES: 0.12 },
+            { name: "Guinea", code: "GNF", dialCode: "+224", symbol: "FG", rateToKES: 66.0 },
+            { name: "Guinea-Bissau", code: "XOF", dialCode: "+245", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Ivory Coast (Côte d'Ivoire)", code: "XOF", dialCode: "+225", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Kenya", code: "KES", dialCode: "+254", symbol: "KSh", rateToKES: 1.0 },
+            { name: "Lesotho", code: "LSL", dialCode: "+266", symbol: "L", rateToKES: 0.14 },
+            { name: "Liberia", code: "LRD", dialCode: "+231", symbol: "L$", rateToKES: 1.48 },
+            { name: "Libya", code: "LYD", dialCode: "+218", symbol: "LD", rateToKES: 0.037 },
+            { name: "Madagascar", code: "MGA", dialCode: "+261", symbol: "Ar", rateToKES: 35.0 },
+            { name: "Malawi", code: "MWK", dialCode: "+265", symbol: "MK", rateToKES: 13.2 },
+            { name: "Mali", code: "XOF", dialCode: "+223", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Mauritania", code: "MRU", dialCode: "+222", symbol: "UM", rateToKES: 0.30 },
+            { name: "Mauritius", code: "MUR", dialCode: "+230", symbol: "Rs", rateToKES: 0.35 },
+            { name: "Morocco", code: "MAD", dialCode: "+212", symbol: "MAD", rateToKES: 0.076 },
+            { name: "Mozambique", code: "MZN", dialCode: "+258", symbol: "MT", rateToKES: 0.49 },
+            { name: "Namibia", code: "NAD", dialCode: "+264", symbol: "N$", rateToKES: 0.14 },
+            { name: "Niger", code: "XOF", dialCode: "+227", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Nigeria", code: "NGN", dialCode: "+234", symbol: "₦", rateToKES: 7.7 },
+            { name: "Rwanda", code: "RWF", dialCode: "+250", symbol: "FRw", rateToKES: 10.2 },
+            { name: "São Tomé and Príncipe", code: "STN", dialCode: "+239", symbol: "Db", rateToKES: 0.17 },
+            { name: "Senegal", code: "XOF", dialCode: "+221", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Seychelles", code: "SCR", dialCode: "+248", symbol: "SR", rateToKES: 0.10 },
+            { name: "Sierra Leone", code: "SLE", dialCode: "+232", symbol: "Le", rateToKES: 0.17 },
+            { name: "Somalia", code: "SOS", dialCode: "+252", symbol: "Sh.So.", rateToKES: 4.38 },
+            { name: "South Africa", code: "ZAR", dialCode: "+27", symbol: "R", rateToKES: 0.14 },
+            { name: "South Sudan", code: "SSP", dialCode: "+211", symbol: "SSP", rateToKES: 12.0 },
+            { name: "Sudan", code: "SDG", dialCode: "+249", symbol: "SDG", rateToKES: 4.6 },
+            { name: "Tanzania", code: "TZS", dialCode: "+255", symbol: "TSh", rateToKES: 19.6 },
+            { name: "Togo", code: "XOF", dialCode: "+228", symbol: "CFA", rateToKES: 4.6 },
+            { name: "Tunisia", code: "TND", dialCode: "+216", symbol: "DT", rateToKES: 0.024 },
+            { name: "Uganda", code: "UGX", dialCode: "+256", symbol: "USh", rateToKES: 28.5 },
+            { name: "Zambia", code: "ZMW", dialCode: "+260", symbol: "ZK", rateToKES: 0.21 },
+            { name: "Zimbabwe", code: "ZWG", dialCode: "+263", symbol: "ZiG", rateToKES: 0.11 }
+        ];
+
+        // 12+ Expanded Wall of Love Testimonial Comments
+        let wallOfLoveComments = [
+            { id: 1, author: "Emmanuel & Chiamaka", country: "Nigeria (+234) & Kenya (+254)", text: "We connected through Afri-Love 3 months ago! The matchmaker connected us directly on WhatsApp. We are getting married in Mombasa!", likes: 142, userLiked: false, time: "1 day ago" },
+            { id: 2, author: "Kofi Mensah", country: "Ghana (+233)", text: "Genuine, fast, and very respectful service. Submitting via WhatsApp made everything straightforward and secure.", likes: 98, userLiked: false, time: "2 days ago" },
+            { id: 3, author: "Zola Ndlovu", country: "South Africa (+27)", text: "For ~60 Rand it was so worth trying! I found my soulmate in Dar es Salaam, Tanzania. Real genuine human matchmaking!", likes: 187, userLiked: false, time: "3 days ago" },
+            { id: 4, author: "David & Mary", country: "Uganda (+256)", text: "Thank you 0789697483 matchmaker team! Very respectful process and beautiful genuine connections.", likes: 76, userLiked: false, time: "5 days ago" },
+            { id: 5, author: "Tariq El-Sayed", country: "Egypt (+20)", text: "Very smooth system. Converted the fee easily to EGP and submitted my application directly on WhatsApp. Great outcome!", likes: 64, userLiked: false, time: "1 week ago" },
+            { id: 6, author: "Amina & Brian", country: "Kenya (+254)", text: "Connected within 48 hours of paying 500 KSh. We hit it off instantly! Blessings to this portal.", likes: 210, userLiked: false, time: "1 week ago" },
+            { id: 7, author: "Fatou Cissé", country: "Senegal (+221)", text: "Sérieux et authentique! Direct communication on WhatsApp with real matchmakers.", likes: 53, userLiked: false, time: "2 weeks ago" },
+            { id: 8, author: "Tendai & Blessing", country: "Zimbabwe (+263)", text: "A truly Pan-African service! It's so nice connecting with genuine lovers from across borders.", likes: 89, userLiked: false, time: "2 weeks ago" },
+            { id: 9, author: "Abel Tekle", country: "Ethiopia (+251)", text: "Very polite matchmaker on WhatsApp (+254 789 697483). Everything went smoothly.", likes: 71, userLiked: false, time: "3 weeks ago" },
+            { id: 10, author: "Josephine M.", country: "Rwanda (+250)", text: "Murakoze! Found a wonderful partner in Nairobi. Thank you for this genuine platform.", likes: 112, userLiked: false, time: "3 weeks ago" },
+            { id: 11, author: "Samuel & Anita", country: "Tanzania (+255)", text: "Nimepata mpenzi wa dhati kabisa kupitia nambari hii ya WhatsApp. Asante sana!", likes: 135, userLiked: false, time: "1 month ago" },
+            { id: 12, author: "Ousmane Traoré", country: "Mali (+223)", text: "Fast response on WhatsApp. Very happy with my match!", likes: 45, userLiked: false, time: "1 month ago" }
+        ];
+
+        const BASE_KES_FEE = 500;
+
+        // Initialize page
+        window.onload = function() {
+            populateCountryDropdowns();
+            renderCountriesTagList();
+            onCountrySelectChange("Kenya");
+            renderComments();
+            calculateGlobalLikes();
+        };
+
+        // Populate country selection dropdowns
+        function populateCountryDropdowns() {
+            const select1 = document.getElementById('homelandSelect');
+            const select2 = document.getElementById('formHomeland');
+
+            select1.innerHTML = '';
+            select2.innerHTML = '';
+
+            // Alphabetical sort
+            africanNations.sort((a, b) => a.name.localeCompare(b.name));
+
+            africanNations.forEach(nation => {
+                const opt1 = document.createElement('option');
+                opt1.value = nation.name;
+                opt1.textContent = `${nation.name} (${nation.dialCode})`;
+                if (nation.name === "Kenya") opt1.selected = true;
+                select1.appendChild(opt1);
+
+                const opt2 = document.createElement('option');
+                opt2.value = nation.name;
+                opt2.textContent = `${nation.name} (${nation.dialCode})`;
+                if (nation.name === "Kenya") opt2.selected = true;
+                select2.appendChild(opt2);
+            });
+        }
+
+        // Render tags for all 54 nations
+        function renderCountriesTagList() {
+            const container = document.getElementById('countriesTagList');
+            container.innerHTML = africanNations.map(n => 
+                `<span class="inline-block bg-amber-950/70 text-amber-200 border border-amber-800 rounded px-1.5 py-0.5 m-0.5">${n.name} (${n.dialCode})</span>`
+            ).join('');
+        }
+
+        // Triggered when user selects a homeland country anywhere
+        function onCountrySelectChange(countryName) {
+            const nation = africanNations.find(n => n.name === countryName) || africanNations.find(n => n.name === "Kenya");
+
+            // Sync both select dropdowns
+            document.getElementById('homelandSelect').value = nation.name;
+            document.getElementById('formHomeland').value = nation.name;
+
+            // Sync Dial Code Prefix Input
+            document.getElementById('dialCodePrefix').value = nation.dialCode;
+
+            // Calculate converted fee
+            let convertedAmount = (nation.code === "KES") ? BASE_KES_FEE : Math.round(BASE_KES_FEE * nation.rateToKES);
+            const formattedFee = convertedAmount.toLocaleString();
+
+            document.getElementById('feeDisplay').innerHTML = `${formattedFee} <span class="text-xl">${nation.symbol}</span> <span class="text-xs text-amber-200 block font-normal">(${nation.name} ${nation.dialCode})</span>`;
+            document.getElementById('formFeeDisplay').textContent = `${formattedFee} ${nation.symbol} (${nation.name} ${nation.dialCode})`;
+        }
+
+        // Handle Application Form Submit -> Prepares text and automatically redirects to WhatsApp
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('applicantName').value.trim();
+            const age = document.getElementById('applicantAge').value.trim();
+            const gender = document.getElementById('applicantGender').value;
+            const seeking = document.getElementById('seekingGender').value;
+            const homeland = document.getElementById('formHomeland').value;
+            const city = document.getElementById('applicantCity').value.trim();
+            const dialCode = document.getElementById('dialCodePrefix').value;
+            const phoneNum = document.getElementById('applicantPhone').value.trim();
+            const bio = document.getElementById('applicantBio').value.trim();
+
+            const nation = africanNations.find(n => n.name === homeland) || { symbol: "KES", rateToKES: 1, dialCode: "+254" };
+            const convertedAmount = (nation.code === "KES") ? "500" : Math.round(500 * nation.rateToKES).toLocaleString();
+
+            const fullPhoneNumber = `${dialCode} ${phoneNum}`;
+
+            // Format WhatsApp text payload
+            const waMessage = 
+`*NEW AFRI-LOVE MATCHMAKING APPLICATION*
+---------------------------------------
+*Full Name:* ${name}
+*Age:* ${age}
+*Gender:* ${gender}
+*Seeking:* ${seeking}
+*Homeland Country:* ${homeland}
+*Country Dial Code:* ${dialCode}
+*Current City:* ${city}
+*Client WhatsApp:* ${fullPhoneNumber}
+*Calculated Fee:* ${convertedAmount} ${nation.symbol} (Base 500 KES Equivalent)
+
+*About Me & Lover Preferences:*
+"${bio}"
+---------------------------------------
+Sent via Afri-Love Matchmaker Portal`;
+
+            const encodedMsg = encodeURIComponent(waMessage);
+            const targetWhatsAppNumber = "254789697483"; // Target +254 789 697483
+            const waUrl = `https://wa.me/${targetWhatsAppNumber}?text=${encodedMsg}`;
+
+            // Automatically open WhatsApp in new tab/window
+            window.open(waUrl, '_blank');
+        }
+
+        // Render Wall of Love Comments
+        function renderComments() {
+            const container = document.getElementById('commentsContainer');
+            container.innerHTML = '';
+
+            wallOfLoveComments.forEach(comment => {
+                const card = document.createElement('div');
+                card.className = "p-3 bg-stone-900/90 border border-amber-800/80 rounded relative text-xs space-y-1.5 shadow";
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-stone-800 pb-1">
+                        <span class="font-bold text-yellow-300 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-user text-amber-500"></i> ${escapeHtml(comment.author)}
+                        </span>
+                        <span class="text-[10px] text-stone-400 bg-stone-950 px-1.5 py-0.5 rounded border border-stone-800">
+                            ${escapeHtml(comment.country)}
+                        </span>
+                    </div>
+                    <p class="text-stone-200 italic leading-relaxed">"${escapeHtml(comment.text)}"</p>
+                    <div class="flex items-center justify-between pt-1 text-[10px] text-stone-400">
+                        <span><i class="fa-regular fa-clock"></i> ${comment.time}</span>
+                        <button onclick="likeComment(${comment.id})" class="px-2.5 py-1 rounded ${comment.userLiked ? 'bg-red-900/80 text-red-200 border border-red-500' : 'bg-stone-950 text-amber-200 hover:bg-stone-800 border border-amber-900'} transition flex items-center gap-1.5 font-bold">
+                            <i class="fa-solid fa-heart ${comment.userLiked ? 'text-red-500 heart-pop' : 'text-stone-500'}"></i>
+                            <span>${comment.likes}</span> Likes
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Interactive Like Handler
+        function likeComment(id) {
+            const comment = wallOfLoveComments.find(c => c.id === id);
+            if (!comment) return;
+
+            if (comment.userLiked) {
+                comment.likes--;
+                comment.userLiked = false;
+            } else {
+                comment.likes++;
+                comment.userLiked = true;
+            }
+
+            renderComments();
+            calculateGlobalLikes();
+        }
+
+        // Calculate total global likes across all comments
+        function calculateGlobalLikes() {
+            const total = wallOfLoveComments.reduce((acc, curr) => acc + curr.likes, 0);
+            document.getElementById('globalLikeCount').textContent = total;
+        }
+
+        // Toggle user comment accordion form
+        function toggleCommentForm() {
+            const container = document.getElementById('commentFormContainer');
+            const chevron = document.getElementById('commentFormChevron');
+            container.classList.toggle('hidden');
+            chevron.classList.toggle('fa-chevron-up');
+            chevron.classList.toggle('fa-chevron-down');
+        }
+
+        // Post new user review/comment
+        function postUserComment() {
+            const authorInput = document.getElementById('newCommentAuthor');
+            const textInput = document.getElementById('newCommentText');
+
+            const author = authorInput.value.trim();
+            const text = textInput.value.trim();
+
+            if (!author || !text) {
+                alert("Please enter both your name/country and comment text.");
+                return;
+            }
+
+            const newComment = {
+                id: Date.now(),
+                author: author,
+                country: "Verified Client",
+                text: text,
+                likes: 1,
+                userLiked: true,
+                time: "Just now"
+            };
+
+            wallOfLoveComments.unshift(newComment);
+            renderComments();
+            calculateGlobalLikes();
+
+            authorInput.value = '';
+            textInput.value = '';
+            toggleCommentForm();
+        }
+
+        // Prevent HTML injection
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+    </script>
+</body>
+</html>
+```
